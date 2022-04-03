@@ -1,0 +1,109 @@
+.how {
+    padding: 4rem 0 1.5rem;
+    background-color: #fff;
+
+    &__wrap {
+        padding-left: 10px;
+        position: relative;
+        
+        &::before {
+            content: '';
+            position: absolute;
+            width: 5px;
+            height: 92%;
+            background: url('../img/how/square_bg.svg') top center repeat-y;
+            top: 25px;
+            left: -7px;
+        }
+    }
+
+    & h3 {
+        font-size: 14px;
+        line-height: 17px;
+        text-align: center;
+        color: #393939;
+        font-weight: 300;
+        margin-bottom: 9px;
+    }
+
+    &__item {
+        height: 70px;
+        position: relative;
+        transition: all .3s;
+
+        &.open {
+            height: auto;
+        } 
+
+        &::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            height: .1rem;
+            width: 29rem;
+            background-color: rgba(0, 0, 0, .1);
+        }
+
+        &-top {
+            height: 7rem;
+            display: flex;
+            //justify-content: space-between;
+            align-items: center;
+            position: relative;
+            
+
+        }
+
+        &:nth-child(1) &-num {
+            color: #EF8B54;
+            letter-spacing: 0.1em;
+        }
+
+        &:nth-child(2) &-title {
+            margin-top: 0.5rem;
+        }
+
+        &-num {
+            font-weight: 700;
+            font-size: 32px;
+            line-height: 39px;
+            color: #393939;
+            width: 5rem;
+        }
+
+        &-title {
+            font-weight: 700;
+            font-size: 12px;
+            line-height: 15px;
+            color: #393939;
+        }
+
+        &-arrow {
+            position: absolute;
+            height: 1.5rem;
+            width: 1.5rem;
+            right: -.6rem;
+            transition: all .3s;
+            cursor: pointer;
+
+            &.active {
+                transform: rotate(180deg);
+                transition: all .3s;
+            }
+        }
+
+        &-text {
+            font-size: 11px;
+            line-height: 17px;
+            color: #393939;
+            padding: 10px 0 20px 10px;
+            opacity: 0;
+            transition: all .3s;
+
+            &.open {
+                opacity: 1;
+                transition: all .3s;
+            }
+        }
+    }
+}

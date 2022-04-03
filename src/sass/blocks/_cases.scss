@@ -1,0 +1,111 @@
+.cases {
+    padding-top: 120px;
+    background: url('../img/cases/bg.png') center top / cover no-repeat;
+
+    &__wrap {
+        margin-top: 3rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    &__item {
+        width: 100%;
+        padding: 1.7rem;
+        background-color: rgba(20, 20, 20, .6);
+        margin-bottom: 4rem;
+        border-radius: .42rem;
+        position: relative;
+
+        &-img {
+            border-radius: .3rem;
+            overflow: hidden;
+            height: 15rem;
+
+            & img {
+                width: 100%;
+                height: 100%;
+            }
+        }
+
+        &-title {
+            margin-top: 1.03rem;
+            font-family: 'Roboto';
+            font-weight: 500;
+            font-size: 2.2rem;
+            line-height: 2.6rem;
+            color: #FFFFFF;
+        }
+
+        &-subtitle {
+            margin-top: .85rem;
+            font-family: 'Roboto';
+            font-style: normal;
+            font-weight: 300;
+            font-size: 1.52rem;
+            line-height: 1.8rem;
+            color: #FFFFFF;
+            opacity: 0.8;
+        }
+
+        &-active {
+            margin-bottom: 5.6rem;
+
+            &::after {
+                content: "";
+                display: block;
+                width: 100%;
+                height: 7px;
+                background: #DE9B55;
+                box-shadow: 0px 1.7px 3.4px rgba(222, 155, 85, 0.4);
+                border-radius: 6px;
+                position: absolute;
+                bottom: -17px;
+                left: 0;
+
+            }
+        }
+    }
+
+    &__consult {
+
+        background: url('../img/cases/cons-bg.png') right center / 194px 194px no-repeat, linear-gradient(147.62deg, #8D5DCC -128.51%, #55329E 221.38%);
+        box-shadow: 0px 5px 10px rgba(94, 56, 158, 0.35);
+        border-radius: 3px;
+        padding: 3.4rem 1.6rem;
+
+        &-wrap {
+
+            & div {
+                display: flex;
+            }
+
+        }
+
+        &-text {
+            font-weight: 700;
+            font-size: 1.1rem;
+            line-height: 1.3rem;
+            color: #FFFFFF;
+            margin-left: 1.94rem;
+
+        }
+
+
+    }
+
+    &__btn {
+        height: 4.4rem;
+        width: 23.25rem;
+        border: .28rem solid #fff;
+        border-radius: .47rem;
+        background-color: transparent;
+        font-weight: 700;
+        font-size: 1.33rem;
+        line-height: 1.6rem;
+        color: #FFFFFF;
+        margin: 3.7rem auto 0;
+        display: block;
+        cursor: pointer;
+    }
+}

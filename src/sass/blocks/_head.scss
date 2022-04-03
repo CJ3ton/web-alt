@@ -1,0 +1,97 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10px;
+    background-color: #202020;
+    height: 50px;
+}
+
+.burger {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    background-color: #292929;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: .25rem;
+    cursor: pointer;
+
+    & span {
+        display: block;
+        width: 1.75rem;
+        height: .125rem;
+        border-radius: 1px;
+        background-color: #fff;
+    }
+}
+
+.head {
+    min-height: 526px;
+    padding: 30px 0 25px 0;
+    background: url('../img/blume.png') center center / cover no-repeat, url('../img/e.svg') left 50% top 50% / 100% no-repeat;
+    background-color: #202020;
+
+    &__ecommerce {
+        display: flex;
+
+        &-text {
+            font-weight: 700;
+            font-size: 1.25rem;
+            line-height: 15px;
+            color: #FF834E;
+            margin-left: .67rem;
+        }
+    }
+
+    &__heading {
+        margin-top: .948rem;
+        font-weight: 700;
+        font-size: 2.08rem;
+        line-height: 28px;
+        color: #FFFFFF;
+    }
+
+    &__img {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 2.38rem auto 0;
+    }
+
+    &__btn {
+        width: 100%;
+        height: 50px;
+        border: none;
+        padding: 15px;
+        background-color: #FF834E;
+        color: #fff;
+        font-size: 16px;
+        line-height: 20px;
+        text-align: left;
+        position: relative;
+        cursor: pointer;
+
+        &-arr {
+            width: 4.77rem;
+            height: 50px;
+            background: url('../icons/arrow.svg') center center no-repeat #DE774B;
+            position: absolute;
+            right: 0;
+            top: 0;
+        }
+    }
+
+    &__answer {
+        margin-top: 1.097rem;
+        font-weight: 300;
+        font-size: 12px;
+        line-height: 15px;
+        font-variant: small-caps;
+        color: #FFFFFF;
+        opacity: 0.5;
+        text-align: center;
+    }
+}

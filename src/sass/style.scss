@@ -1,0 +1,53 @@
+@import 'libs/reseter.min';
+@import url('https://unpkg.com/swiper@8/swiper-bundle.min.css');
+@import 'fonts.scss';
+
+* {
+    font-family: 'Montserrat';
+}
+
+html {
+    font-size: 10px;
+}
+
+body {
+    background-color: #171718;
+}
+
+.container {
+    max-width: 100%;
+    margin: 0 2rem;
+}
+
+.divider {
+    display: block;
+    width: 200px;
+    height: 1px;
+    margin: 4rem auto;
+    background-color: rgba(255, 255, 255, 0.1);
+
+    &-up {
+        margin-bottom: 0;
+    }
+
+}
+
+.section__title {
+    font-weight: 300;
+    font-size: 2.08rem;
+    line-height: 2.5rem;
+    color: #FFFFFF;
+
+    &-center {
+        text-align: center;
+    }
+}
+
+
+@import 'blocks/head';
+@import 'blocks/how';
+@import 'blocks/features';
+@import 'blocks/cases';
+@import 'blocks/clients';
+@import 'blocks/feed';
+@import 'blocks/footer';
