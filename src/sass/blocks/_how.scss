@@ -63,6 +63,13 @@
             margin-top: 0.5rem;
         }
 
+        &:nth-child(6) {
+
+            &::after {
+                display: none;
+            }
+        }
+
         &-num {
             font-weight: 700;
             font-size: 32px;
