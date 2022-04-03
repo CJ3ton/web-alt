@@ -1,10 +1,103 @@
 .header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 10px;
     background-color: #202020;
-    height: 50px;
+
+    &__wrap {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 10px;
+        background-color: #202020;
+        height: 50px;
+
+    }
+
+    &__logo {
+
+        display: flex;
+        align-items: center;
+
+        &-text {
+            margin-left: 1.4rem;
+            font-family: 'TT Norms';
+            font-weight: 500;
+            font-size: 1.1rem;
+            line-height: 1.3rem;
+            letter-spacing: 0.3em;
+            color: #FFFFFF;
+            display: none;
+        }
+    }
+
+    &__button {
+        width: 16.6rem;
+        height: 4.7rem;
+        border: 1px solid #FF834E;
+        background-color: transparent;
+        font-family: 'Source Sans Pro';
+        font-weight: 300;
+        font-size: 1.6rem;
+        line-height: 2rem;
+        color: #FF834E;
+        transition: all .3s;
+        cursor: pointer;
+        display: none;
+
+        &:hover {
+            transition: all .3s;
+            color: #ffffff;
+            border: 2px solid #ffffff;
+        }
+    }
+
+    &__tel {
+        display: none;
+        margin-left: 3rem;
+
+        & a {
+            font-family: 'Source Sans Pro';
+            font-weight: 300;
+            font-size: 1.8rem;
+            line-height: 2.3rem;
+            color: #FFFFFF;
+            text-decoration: none;
+            transition: all .3s;
+
+            &:hover {
+                transition: all .3s;
+                color: #FF834E;
+            }
+        }
+
+    }
+
+    &__nav {
+        display: none;
+
+        & ul {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            list-style-type: none;
+            gap: 30px;
+
+            & li {
+
+                & a {
+                    font-weight: 600;
+                    font-size: 1.4rem;
+                    line-height: 1.7rem;
+                    color: #FFFFFF;
+                    text-decoration: none;
+                    transition: all .3s;
+
+                    &:hover {
+                        transition: all .3s;
+                        color: #FF834E;
+                    }
+                }
+            }
+        }
+    }
 }
 
 .burger {
@@ -33,9 +126,11 @@
     padding: 30px 0 25px 0;
     background: url('../img/blume.png') center center / cover no-repeat;
     background-color: #202020;
+    overflow-x: hidden;
 
     &__ecommerce {
         display: flex;
+        align-items: center;
 
         &-text {
             font-weight: 700;
@@ -54,12 +149,21 @@
         color: #FFFFFF;
     }
 
+    &__subtitle {
+        display: none;
+    }
+
     &__img {
+        width: 20rem;
         display: flex;
         justify-content: center;
         align-items: center;
         margin: 2.38rem auto 0;
         position: relative;
+
+        &-hd {
+            display: none;
+        }
     }
 
     &__bg {
@@ -74,26 +178,34 @@
         }
     }
 
+    &__button {
+        display: flex;
+        flex-direction: column;
+    }
+
     &__btn {
-        width: 100%;
-        height: 50px;
+        width: 28rem;
+        height: 5rem;
         border: none;
-        padding: 15px;
+        padding: 1.5rem;
         background-color: #FF834E;
         color: #fff;
-        font-size: 16px;
-        line-height: 20px;
+        font-size: 1.6rem;
+        line-height: 2rem;
         text-align: left;
         position: relative;
         cursor: pointer;
 
         &-arr {
+            display: flex;
+            justify-content: center;
+            align-items: center;
             width: 4.77rem;
             height: 50px;
-            background: url('../icons/arrow.svg') center center no-repeat #DE774B;
             position: absolute;
             right: 0;
             top: 0;
+            background-color: #DE774B;
         }
     }
 
