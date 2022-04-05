@@ -1,0 +1,55 @@
+.mobile {
+
+    &__logo {
+        margin: 0 0 25px;
+    }
+
+    &__menu {
+        width: 100%;
+        max-width: 320px;
+        height: 100%;
+        position: fixed;
+        background-color: rgba(23, 23, 24, .8);
+        padding: 36px 45px;
+        top: 0;
+        left: -100%;
+        transition: all .5s;
+
+        &.show {
+            left: 0;
+        }
+
+        & ul {
+            list-style-type: none;
+
+            & li {
+                margin-bottom: 18px;
+            
+                & a {
+                    font-size: 22px;
+                    line-height: 32px;
+                    color: #fff;
+                    text-decoration: none;
+                }
+            
+            }
+        }
+
+        &-close {
+            position: absolute;
+            top: 30px;
+            right: 30px;
+            width: 24px;
+            height: 38px;
+            cursor: pointer;
+
+            & img {
+                width: 100%;
+            }
+
+            & svg path {
+                fill: #fff;
+            }
+        }
+    }
+}
