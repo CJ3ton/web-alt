@@ -1,6 +1,11 @@
 .feed {
     background: url('../img/form/bg.png') top center / 100% 1367px no-repeat;
     padding-bottom: 8.5rem;
+    
+    &__text {
+        display: flex;
+        flex-direction: column;
+    }
 
     &__title {
         font-weight: 700;

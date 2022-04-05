@@ -30,6 +30,7 @@
         height: 70px;
         position: relative;
         transition: all .3s;
+        cursor: pointer;
 
         &.open {
             height: auto;

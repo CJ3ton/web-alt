@@ -5,7 +5,7 @@
         padding-top: 38px;
 
         &-wrap {
-            width: 210px;
+            width: 21rem;
             margin: 0 auto;
         }
 
@@ -24,6 +24,7 @@
             height: 5rem;
             border: 2px solid #EF8B54;
             border-radius: 50%;
+            cursor: pointer;
         }
 
         &-prev {
@@ -37,6 +38,7 @@
 .slide-img {
     width: 210px;
     height: 210px;
+    
 
     & img {
         width: 100%;

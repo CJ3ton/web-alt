@@ -29,17 +29,6 @@
     }
 
     &__button {
-        width: 16.6rem;
-        height: 4.7rem;
-        border: 1px solid #FF834E;
-        background-color: transparent;
-        font-family: 'Source Sans Pro';
-        font-weight: 300;
-        font-size: 1.6rem;
-        line-height: 2rem;
-        color: #FF834E;
-        transition: all .3s;
-        cursor: pointer;
         display: none;
 
         &:hover {
@@ -78,7 +67,7 @@
             justify-content: space-between;
             align-items: center;
             list-style-type: none;
-            gap: 30px;
+            gap: 31px;
 
             & li {
 
@@ -137,7 +126,8 @@
             font-size: 1.25rem;
             line-height: 15px;
             color: #FF834E;
-            margin-left: .67rem;
+            margin-left: .77rem;
+            letter-spacing: .9px;
         }
     }
 
