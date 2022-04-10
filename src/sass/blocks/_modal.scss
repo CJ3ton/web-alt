@@ -72,4 +72,23 @@
             display: block;
         }
     }
+
+    &__form {
+        width: 320px;
+        position: fixed;
+        left: -100%;
+        top: 50%;
+        transform: translateY(-50%) translateX(-50%);
+        z-index: -1;
+        transition: opacity .3s;
+
+        &.show {
+            left: 50%;
+            opacity: 1;
+            visibility: visible;
+            z-index: 1000;
+            transition: opacity .3s;
+        }
+
+    }
 }

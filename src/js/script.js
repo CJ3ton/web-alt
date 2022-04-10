@@ -12,9 +12,17 @@ const spoiler = document.querySelectorAll('.how__item-top'),
     burger = document.querySelector('.burger'),
     mobileMenu = document.querySelector('.mobile__menu'),
     mobileClose = document.querySelector('.mobile__menu-close'),
-    menuList = document.querySelector('.menu__list');
+    menuList = document.querySelector('.menu__list'),
+    headBtn = document.querySelector('.head__btn'),
+    form = document.querySelector('.feed__form'),
+    modalForm = document.querySelector('.modal__form');
 
 console.log(works, modalData);
+
+headBtn.addEventListener('click', (e) => {
+    overlay.classList.add('show');
+    modalForm.classList.add('show');
+});
 
 spoiler.forEach((item, i) => {
     item.addEventListener('click', (e) => {
@@ -47,7 +55,7 @@ menuList.addEventListener('click', (e) => {
     if (e.target.nodeName === 'A') {
         overlay.classList.remove('show');
         mobileMenu.classList.remove('show');
-    };
+    }
 });
 
 overlay.addEventListener('click', (e) => {
@@ -55,6 +63,7 @@ overlay.addEventListener('click', (e) => {
         overlay.classList.remove('show');
         modal.classList.remove('show');
         mobileMenu.classList.remove('show');
+        modalForm.classList.add.remove('show');
     }
 });
 
@@ -137,3 +146,39 @@ tabsBtn.forEach((btn, i) => {
         showTabContent(i);
     });
 });
+
+form.addEventListener('submit', async (e) => {
+    e.preventDefault();
+
+    let response = await fetch('/mailer/smart.php', {
+        method: 'POST',
+        body: new FormData(form)
+    });
+
+    let result = await response.json();
+
+    if (result.message === 'success') {
+        console.log('Success!');
+        form.reset();
+        showMessage('Ваше сообщение успешно отправлено!');
+    } else {
+        console.log('Error!');
+        form.reset();
+        showMessage('Ошибка! Сообщение не отправлено!');
+    }
+
+});
+
+function showMessage(text) {
+    const message = document.querySelector('.message');
+    message.textContent = text;
+    overlay.classList.add('show');
+    message.classList.add('show');
+    const timerId = setTimeout(closeMessage, 5000);
+
+    function closeMessage() {
+        message.classList.remove('show');
+        overlay.classList.remove('show');
+        clearTimeout(timerId);
+    }
+}
